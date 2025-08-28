@@ -2,6 +2,38 @@
 
 This example demonstrates how to get automation id of Xamarin.Forms listview in renderer.
 
+## Sample 
+
+```xaml
+<StackLayout>
+    <Button Text="Check AutomationID" Clicked="Button_Clicked"/>
+    <local:ExtendedListView x:Name="listView" BackgroundColor="AliceBlue" AllowGroupExpandCollapse="True" 
+                            AutomationId="12345"
+                        ItemSpacing="3" ItemSize="70" ItemsSource="{Binding contactsinfo}">
+        <local:ExtendedListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid x:Name="grid" RowSpacing="1" >
+                            <code>
+                            . . .
+                            . . .
+                            <code>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </local:ExtendedListView.ItemTemplate>
+    </local:ExtendedListView>
+</StackLayout>
+
+Code behind:
+private void Button_Clicked(object sender, EventArgs e)
+{
+    DisplayAlert("Message","ListView Automation ID:" +listView.AutomationId,"ok");
+}
+```
+
 See [How to get automation id of Xamarin.Forms listview in renderer](https://www.syncfusion.com/kb/9960/how-to-get-automation-id-of-xamarin-forms-listview-in-renderer) for more details.
 
 ## Requirements to run the demo
