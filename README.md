@@ -27,7 +27,7 @@ This example demonstrates how to get automation id of Xamarin.Forms listview in 
     </local:ExtendedListView>
 </StackLayout>
 
-Code behind:
+C#:
 private void Button_Clicked(object sender, EventArgs e)
 {
     DisplayAlert("Message","ListView Automation ID:" +listView.AutomationId,"ok");
